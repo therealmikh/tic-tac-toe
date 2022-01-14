@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;500;700&display=swap");
 
+.container {
+    max-width: 400px;
+    height: 100vh;
+    width: 100%;
+    margin: 220px auto;
+    background-color: linear-gradient(to bottom, #F5EE9E 0%, #F9F5C8 100%);
+}
+
 body {
   font: 16px;
   margin: 20px;
   font-family: "Be Vietnam Pro", sans-serif;
   background: #F5EE9E;
+  overflow-y: hidden;
 }
 
 ol,
@@ -23,8 +32,7 @@ ul {
 }
 
 .square {
-  background: #3B8EA5;
-  border: 1px solid #eee;
+  background: #d1f5ff;
   float: left;
   font-size: 24px;
   font-weight: bold;
@@ -34,13 +42,18 @@ ul {
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
-  border-radius: 5px;
-  outline: none;
+  height: 55px;
+  width: 55px;
+  border: 1px solid rgb(111, 202, 255);
 }
 
 .square:focus {
   outline: none;
+}
+
+.square:hover {
+    background-color:rgb(111, 255, 255);
+    transition: 1s;
 }
 
 .kbd-navigation .square:focus {
@@ -50,8 +63,38 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.game-info ol li {
+    margin-top: 10px;
+}
+
+.game-info button {
+    outline: none;
+    border: none;
+    background: #F49E4C;
+    color: #fff;
+    font-size: 16px;
+
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px 10px;
+}
+
+.game-info button:hover {
+    background: #69B4C9;
+    transition: .5s;
+}
+
+
+.game-info ol {
+    max-height: 300px;
+    width: 150px;
+    overflow-y: auto;
 }
